@@ -1,0 +1,442 @@
+<html>
+    <title>scrollify</title>
+    <head>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    </head>
+<style>
+
+body{
+	color: #fff;
+  overflow-y:auto;
+}
+/*  OVERLAY PATTERN  */
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+  background:rgba(20, 0, 51,0.8);
+}
+
+svg{
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  z-index:0;
+}
+/* -------SECTIONS CSS---------- */
+section {
+	padding:200px 0;
+  text-align:center;
+  min-height:110vh;
+}
+  section:last-of-type{
+    padding-bottom:300px;
+  }
+.bg-dark{
+  color:#fff;
+  background:rgba(0,0,0,0.8) !important;
+}
+.navbar-nav li a{
+  border-radius:30px;
+  transition:all 0.5s ease-in;
+}
+.navbar-nav li.active a{
+  background:#f06;
+  color:#fff !important;
+}
+
+
+@media(max-width:768px){
+  section:first-of-type{
+    padding-top:80px;
+  }
+  .navbar-nav{
+    padding:0px;
+  }
+  
+.navbar-nav li a{
+   padding-left:20px !important;
+  }
+}
+
+@media(min-width:768px){
+  section:first-of-type{
+    padding-top:100px;
+  }
+  .navbar{
+}
+  .navbar-theme{
+  background:none !important;
+}
+  .navbar-brand{
+    display:none;
+  }
+.navbar-nav li a{
+  color:#fff;
+  margin:0;
+  padding:10px 20px !important;
+}
+
+}
+.btn-theme{
+	background-color:#f06;
+	border:1px solid rgb(255,20,147);
+  color:#fff;
+}
+.color-theme{
+  color:#f06;
+}
+
+#home-slides{
+  margin:20px 0;
+}
+
+.btn-next{
+	width:50px;
+	height:50px;
+	border:1px solid #fff;
+	border-radius:50%;
+	cursor: pointer;
+	color: #CCC;
+	font-size:20px;
+	line-height:50px;
+	margin:20px auto;
+	animation:blink 1s ease-in-out alternate infinite;
+}
+.btn-next:hover{
+	color:#FFF;
+}
+
+@keyframes blink {  
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+
+
+</style>
+    <body>
+
+        here
+ <svg viewBox="0 0 100 200" >
+        <g fill="#f06" fill-opacity=".8">
+          <polygon class="polymorph" points="0,0 0,0 0,0 0,200"></polygon>
+      </g>
+    </svg> 
+<div id="overlay"></div>
+
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark navbar-theme">
+  <a class="navbar-brand" href="#">BRAND</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-md-center" id="main-menu">
+    <ul class="navbar-nav text-uppercase mt-4">
+      <li class="nav-item active">
+        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#products">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+		<section data-section-name="home" class="parallax-window" data-parallax="scroll" data-image-src="https://s25.postimg.cc/g4xb2vasf/sky-690293_1920.jpg">
+      
+<div class="container-fluid">
+	<div class="row">
+    <div class="col">
+      
+      			<!-- HOME SLIDES  -->
+			<div id="home-slides" class="owl-carousel owl-theme reveal">
+				<div class="item">
+					<h1 class="display-3 text-uppercase" data-in="fadeInDown">Slide <span class="color-theme">Title1</span></h1> 
+					<h2 data-in="fadeInUp">Lorem ipsum dolor sit amet</h2> 
+					<p data-in="fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in felis at arcu accumsan aliquet.<br> Sed porttitor egestas lorem a imperdiet. Integer in efficitur risus, et accumsan sapien. <br>Morbi fringilla arcu erat, eu volutpat lorem faucibus commodo.</p>
+					<a href="#" class="btn btn-theme" data-in="fadeInDown">Read More</a>			
+				</div>
+				<div class="item">
+					<h1 class="display-3 text-uppercase" data-in="fadeInDown">Slide <span class="color-theme">Title2</span></h1> 
+					<h2 data-in="fadeInUp">Lorem ipsum dolor sit amet</h2> 
+					<p data-in="fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in felis at arcu accumsan aliquet.<br> Sed porttitor egestas lorem a imperdiet. Integer in efficitur risus, et accumsan sapien. <br>Morbi fringilla arcu erat, eu volutpat lorem faucibus commodo. </p>
+					<a href="#" class="btn btn-theme" data-in="fadeInDown">Read More</a>					
+				</div>
+				<div class="item">
+					<h1 class="display-3 text-uppercase" data-in="fadeInDown">Slide <span class="color-theme">Title3</span></h1> 
+					<h2 data-in="fadeInUp">Lorem ipsum dolor sit amet</h2> 
+					<p data-in="fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in felis at arcu accumsan aliquet.<br> Sed porttitor egestas lorem a imperdiet. Integer in efficitur risus, et accumsan sapien. <br>Morbi fringilla arcu erat, eu volutpat lorem faucibus commodo.</p>
+					<a href="#" class="btn btn-theme" data-in="fadeInDown">Read More</a>								
+				</div>
+			
+			</div>
+				
+				<div class="clearfix"></div>
+				<!-- NEXT BUTTON -->
+				<div class="btn-next"><i class="fa fa-angle-down bounce"></i></div>
+      
+    </div>
+  </div>
+  </div>
+    </section>
+		<section data-section-name="about" class="parallax-window" data-parallax="scroll" data-image-src="https://s25.postimg.cc/6yy9db2bz/image.jpg">	
+        
+<div class="container-fluid">
+	<div class="row">
+    
+    <div class="col reveal">
+      <h1 class="display-4 text-center text-uppercase">About </h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in felis at arcu accumsan aliquet vel id purus.<br style="display: block;"> Sed porttitor egestas lorem a imperdiet. Integer in efficitur risus, et accumsan sapien. <br style="display: block;">Morbi fringilla arcu erat, eu volutpat lorem faucibus commodo. Nam vitae lectus nibh.</p>
+      
+      
+				<div class="clearfix"></div>
+				<!-- NEXT BUTTON -->
+				<div class="btn-next"><i class="fa fa-angle-down bounce"></i></div>
+    </div>
+  </div>
+  </div>
+    </section>
+
+<section data-section-name="services" class="parallax-window" data-parallax="scroll" data-image-src="https://s25.postimg.cc/hyjgox0gv/image.jpg">	
+          
+<div class="container-fluid">
+	<div class="row">
+        <div class="col reveal">
+      <h1 class="display-4 text-center text-uppercase">Services </h1>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in felis at arcu accumsan aliquet vel id purus.<br style="display: block;"> Sed porttitor egestas lorem a imperdiet. Integer in efficitur risus, et accumsan sapien. <br style="display: block;">Morbi fringilla arcu erat, eu volutpat lorem faucibus commodo. Nam vitae lectus nibh.</p>
+				<div class="clearfix"></div>
+				<!-- NEXT BUTTON -->
+				<div class="btn-next"><i class="fa fa-angle-down bounce"></i></div>
+    </div>
+    </div>
+  </div>
+    </section>
+
+		<section data-section-name="products" class="parallax-window" data-parallax="scroll" data-image-src="https://s25.postimg.cc/69fh0yh7z/image.jpg">	
+           
+<div class="container-fluid">
+	<div class="row">
+    
+    <div class="col reveal">
+      <h1 class="display-4 text-center text-uppercase">Products </h1>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in felis at arcu accumsan aliquet vel id purus.<br style="display: block;"> Sed porttitor egestas lorem a imperdiet. Integer in efficitur risus, et accumsan sapien. <br style="display: block;">Morbi fringilla arcu erat, eu volutpat lorem faucibus commodo. Nam vitae lectus nibh.</p>
+				<div class="clearfix"></div>
+				<!-- NEXT BUTTON -->
+				<div class="btn-next"><i class="fa fa-angle-down bounce"></i></div>
+  </div>
+  </div>
+  </div>
+    </section>
+
+		<section data-section-name="contact" class="parallax-window" data-parallax="scroll" data-image-src="https://s25.postimg.cc/x5g7bhy3j/beach-832346_1920.jpg">	
+           
+<div class="container-fluid">
+	<div class="row">
+    
+    <div class="col reveal">
+      <h1 class="display-4 text-center text-uppercase">Contact </h1>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in felis at arcu accumsan aliquet vel id purus.<br style="display: block;"> Sed porttitor egestas lorem a imperdiet. Integer in efficitur risus, et accumsan sapien. <br style="display: block;">Morbi fringilla arcu erat, eu volutpat lorem faucibus commodo. Nam vitae lectus nibh.</p>
+    </div>
+  </div>
+  </div>
+    </section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
+
+https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js
+<script>
+
+    $(document).ready(function() {
+        $.scrollify({
+            section : ".sectionalScrolling",
+        });
+    });
+$(document).ready(function(){
+
+ 	$.scrollify({
+		section : "section",
+		sectionName : "section-name",
+		interstitialSection : "",
+		easing: "easeOutExpo",
+		scrollSpeed: 1200,
+		offset :50,
+		scrollbars: false,
+		standardScrollElements: ".normal-scroll",
+		setHeights: false,
+		overflowScroll: true,
+		before:function() { scrollspy($.scrollify.current().attr('data-section-name'))},
+		after:function(i) {
+      $.scrollify.update();    
+      $('.navbar').animate({'opacity':1},500);
+        const $body = $('body');
+        let preIndex = parseInt($body.attr('data-pre-index'));
+        let direction = i > preIndex ? 'down' : 'up';
+
+        $body
+            .attr('data-pre-index', i)
+            .removeClass('up down')
+            .addClass(direction);              
+    },
+		afterResize:function() {},
+		afterRender:function() {
+      $('body').attr('data-pre-index', 0);
+    }
+	});
+  
+	
+	function scrollspy(sectionName){
+    
+  var morphing1 = anime({
+  targets: '.polymorph',
+  points: [
+      
+    { value: '0,0 0,0 0,0 0,200' },
+    { value: '0,0 100,0 50,200 0,200' },
+    { value: '0,0 100,0 100,200 0,200' },
+    { value: '100,0 100,0 100,200 50,200' },
+    { value: '100,0 100,0 100,200 100,200' }
+    
+  ],
+  easing: 'easeOutQuad',
+  duration: 1600,
+  loop: false
+});
+
+    $('.navbar').animate({'opacity':0},500);
+		$('.navbar-nav li').removeClass('active');
+		$('.navbar-nav li').has('a[href="#'+sectionName+'"]').addClass('active');
+	}	
+
+	$('.navbar-nav li a, .link').on('click', function(e){	
+		$('.navbar-nav a').blur();
+    if($(window).width()<768){
+       
+    $('#main-menu').collapse('toggle');
+       
+       }
+		e.preventDefault()
+		$('.navbar-nav li').removeClass('active');
+		$(this).parents('li').addClass('active');
+		var link = $(this).attr('href');
+		$.scrollify.move(link);
+	});	
+  
+  
+	$('.btn-next').on('click', function(e){	
+		$.scrollify.next();
+	});
+  var home_slides = $('#home-slides');
+	home_slides.owlCarousel({
+		loop:true,
+		items:1,
+		animateOut:'fadeOut',
+		autoplay:5000,
+    nav:false,
+    dots:false,
+	 
+	});
+		// add animate.css class(es) to the elements to be animated
+	  function setAnimation ( _elem, _InOut ) {
+		// Store all animationend event name in a string.
+		// cf animate.css documentation
+		var animationEndEvent = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+		_elem.each ( function () {
+		  var $elem = $(this);
+		  var $animationType = 'animated ' + $elem.data( _InOut );
+
+		  $elem.addClass($animationType).one(animationEndEvent, function () {
+			$elem.removeClass($animationType); // remove animate.css Class at the end of the animations
+		  });
+		});
+	  }
+
+	// Fired before current slide change
+	  home_slides.on('change.owl.carousel', function(event) {
+		  var $currentItem = $('.owl-item', home_slides).eq(event.item.index);
+		  var $elemsToanim = $currentItem.find("[data-out]");
+		  setAnimation ($elemsToanim, 'out');
+	  });
+
+	// Fired after current slide has been changed
+	  home_slides.on('changed.owl.carousel', function(event) {
+
+		  var $currentItem = $('.owl-item', home_slides).eq(event.item.index);
+		  var $elemsToanim = $currentItem.find("[data-in]");$elemsToanim.css({'opacity':'1','visibility':'visible'})
+		  setAnimation ($elemsToanim, 'in');
+	  })
+
+	// Fired after current slide has been changed
+	  home_slides.on('changed.owl.carousel', function(event) {
+
+		  var $currentItem = $('.owl-item', home_slides).eq(event.item.index);
+		  var $elemsToanim = $currentItem.find("[data-in]");
+		  setAnimation ($elemsToanim, 'in');
+	  })
+
+  
+  window.sr = ScrollReveal();
+
+	sr.reveal('.reveal', {origin:'bottom', delay:1500,duration:1000, distance: '100px',opacity:0, reset: true });
+
+  var morphing1 = anime({
+  targets: '.polymorph',
+  points: [
+      
+    { value: '0,0 0,0 0,0 0,200' },
+    { value: '0,0 100,0 50,200 0,200' },
+    { value: '0,0 100,0 100,200 0,200' },
+    { value: '100,0 100,0 100,200 50,200' },
+    { value: '100,0 100,0 100,200 100,200' }
+    
+  ],
+  easing: 'easeOutQuad',
+  duration: 1600,
+  loop: false
+});
+	
+});
+
+
+
+
+$(window).on(function() {
+	if($(window).width()<768){
+		$('p > br').css({'display': 'none'})
+	}
+	if($(window).width()>768){
+		$('p > br').css({'display': 'block'})
+	}
+	$.scrollify.update();
+});
+
+$(window).resize(function() {
+	if($(window).width()<768){
+		$('p > br').css({'display': 'none'})
+	}
+	if($(window).width()>768){
+		$('p > br').css({'display': 'block'})
+	}
+});
+
+
+	
+</script>
+ 
+
+</html>
