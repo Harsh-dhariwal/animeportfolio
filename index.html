@@ -4,210 +4,7 @@
 
 
     </head>
-    <style>
-
-body {
-    transform: translateZ(0);
-  }
-  
-  .magic-fixed-pixel {
-    position: fixed;
-    top: 0;
-    width: 1px;
-    height: 1px;
-    z-index: 1;
-  }
-  
-  .parallax {
-    overflow-x: hidden;
-    overflow-y: auto;
-    height: 100vh;
-    perspective: 1px;
-    perspective-origin: right;
-  }
-  
-  .parallax__group {
-    position: relative;
-    height: 100vh;
-    transform-style: preserve-3d;
-  }
-  
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform-origin: right;
-  }
-  
-  .parallax__layer--base {
-    transform: translateZ(0);
-    z-index: 4;
-  }
-  
-  .parallax__layer--back {
-    transform: translateZ(-1px) scale(2);
-    z-index: 3;
-  }
-  
-  /**
-   * Parallax layering
-   */
-  
-  #group1 {
-    z-index: 4;
-  }
-  
-  #group2 {
-    z-index: 3;
-  }
-  
-  #group3 {
-    z-index: 4;
-  }
-    
-  #group4 {
-    z-index: 3;
-  }
-  #group5 {
-    z-index: 4;
-  }
-  
-  
-  /**
-   * Section stacking
-   */
-  
-  .section {
-    position: fixed;
-    height: 100vh;
-  }
-  
-  #section1 {
-    top: 0vh;
-  }
-  #section2 {
-    top: 100vh;
-  }
-  #section3 {
-    top: 200vh;
-  }
-  #section4 {
-    top: 300vh;
-  }
-  #section5 {
-    top: 400vh;
-  }
-
-  
-
-  nav{
-    width: 84%;
-    margin: auto;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.logo{
-    width: 150px;
-    cursor: pointer;
-}
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-nav ul li a{
-    text-decoration: none;
-    color: #fff;
-}
-nav ul li a:hover{
-    background:#fff;
-    color:#000;
-    radius:2px;
-}
-.btn{
-    background:#b413b9;
-    border-radius: 5px;
-    padding: 10px 18px;
-    text-decoration: none;
-    color: #fff;
-    display: inline-block;
-    border: 1px solid transparent;
-    transition: all 0.4s ease;
-}
-.btn:hover{
-    background: transparent;
-    background:#b413b9;
-    color:;
-    background:#b413b9;
-    border: 1px solid ;
-}
-
-
-
-
-
-  
-  
-  /**
-   * Styling
-   */
-  
-  html,
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  #group1 section {
-background-image:url('bg1.png');
-background-size:cover;
-background-repeat:no-repeat;
-background-position: center center;
-  }
- 
-  
-  #group2 section {
-    background-image:url('bg2.png');
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position: center center;
-  }
-  
-  #group3 section {
-    background: blue;
-    background-image:url('bg3.png');
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position: center center;
-  }
-  #group4 section {
-    background: blue;
-    background-image:url('bg4.png');
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position: center center;
-  }
-  #group5 section {
-    background: blue;
-    background-image:url('bg5.png');
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position: center center;
-  }
-  
-  section p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    font-size: 48px;
-    color: white;
-  }
-</style>  
+    <link rel="stylesheet" href="style.css">
 <body style="margin: 0;">
 <div class="magic-fixed-pixel"></div>
 
@@ -232,11 +29,31 @@ background-position: center center;
             </ul>
             <a href="mailto:harshdhariwal29@gmail.com" class="btn">Connect</a>
         </nav>
+
+
+        
       <p>Section 1</p>
       
     </section>
   </div>
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div id="group2" class="parallax__group">
     <section class="parallax__layer parallax__layer--back">
       <p>Section 2</p>
